@@ -1,0 +1,257 @@
+* {
+    /* for whole document property */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 20px;
+}
+
+/* ::-webkit-scrollbar-thumb{
+    border-radius: 30px;
+    background: -webkit-gradient (linear,left top,left bottom, from (#fff8a0)
+    to(#da1b60));
+    box-shadow: inset 2px 2px 2px rgba(255,255,255.0.25),inset -2px -2px -2px
+    rgba(0,0,0,0.25);
+
+}
+
+::-webkit-scrollbar-track{
+    background: linear-gradient(to right, #201c29, #201c29 1px, #100e17 1px, #100e17);
+    
+} */
+
+::-webkit-scrollbar-track{
+    border: 7px solid #232943;
+    box-shadow: inset 0 0 2.5px 2px rgba(0,0,0,0.5);
+
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(
+        45deg,
+        #06dee1,
+        #79ff6c
+    );
+    border-radius: 3px;
+}
+
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff 
+    url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/f1055231234507.564a1d234bfb6.gif') no-repeat center;
+    z-index: 99999;
+}
+
+body {
+    /* for every element which are in body tag */
+    display: flex;
+    /* body display parent property */
+    justify-content: center;
+    /* element of body are in horizontally center */
+    align-items: center;
+    /* element of body are in vertically center */
+    min-height: 100vh;
+    /* sets minimum height if view height (vh) */
+    background-image: repeating-linear-gradient(rgba(0, 0, 255, 0.522), rgba(242, 66, 227, 0.535)); /* #6b03f4 */
+}
+
+.container {
+    /* main div property */
+    position: relative;
+    /* setting parent position */
+    width: 1280px;
+    /* setting width horizontally  */
+    display: flex;
+    /* display parent property */
+    justify-content: center;
+    /* horizontally center */
+    align-items: center;
+    /* vertically center */
+    flex-wrap: wrap;
+    /* each container is now responsive according to width */
+}
+
+.container .cards {
+    /* adding card div property */
+    position: relative;
+    /* making card position as parent */
+    width: 300px;
+    /* horizontal width */
+    height: 400px;
+    /* vertical height */
+    background: linear-gradient(#2196f3, #2196f3 30%, #1d3548 30%, #1d3548);
+    /* apply in background with multi color */
+    margin: 10px;
+    /* space between each card is 10px */
+    border-radius: 20px;
+    /* edge of card gets curved  */
+    overflow: hidden;
+    /* overflow out of card items are hidden i.e here image edge is out of card and it get adjust as barder radius */
+}
+
+.container .cards .imgBx {
+    /* adding imagebx property */
+    position: absolute;
+    /* imagebx position as child */
+    top: 0;
+    /* imagebx from top attached with 0 space */
+    left: 0;
+    /* imagebx from left attached with 0 space */
+    width: 100%;
+    /* imagebx takes 100% horizontally width */
+    height: 100%;
+    /* imagebx takes 100% vertically width */
+    transition: 0.5s;
+    /* imagebx animation time */
+    z-index: 100000;
+    /* imgbx floats upside */
+    border-radius: 20px;
+    /* edge of image gets curved  */
+    overflow: hidden;
+    /* overflow out of image items are hidden i.e here image edge is out of imagebx and it get adjust as border radius */
+    transform-origin: top;
+    /* imgbx moves top */
+    /* display: none; */
+    /* imgbx content gets hidden */
+    /* transform-origin: center; */
+    /* imgbx maves toward center and depends upon transform*/
+}
+
+.container .cards:hover .imgBx {
+    /* when card is hovered then imagebx what do  */
+    transform: translateY(30px) scale(.5);
+    /* "translatey" add space in top and "scale" animate imgbx toward upside making small */
+}
+
+.container .cards .imgBx img {
+    /* image property */
+    position: absolute;
+    /* image position as child */
+    top: 0;
+    /* image from top attached with 0 space */
+    left: 0;
+    /* image from left attached with 0 space */
+    width: 100%;
+    /* image takes 100% horizontally width */
+    height: 100%;
+    /* image takes 100% vertically width */
+    object-fit: cover;
+    /* image is little stretched and fits as book cover */
+}
+
+.container .cards .content {
+    /* content contains "detail class" property as parent */
+    position: absolute;
+    /* making content position as child */
+    top: 0;
+    /* content from top attached with 0 space */
+    left: 0;
+    /* content from left attached with 0 space */
+    width: 100%;
+    /* content takes 100% horizontally width */
+    height: 100%;
+    /* content takes 100% vertically width */
+    display: flex;
+    /* display content as parent property */
+    justify-content: center;
+    /* horizontally center */
+    align-items: flex-end;
+    /* vertically at the end of flex box */
+    padding-bottom: 30px;
+    /* leaves space from bottom 30px */
+    transform: translateY(100%);
+    /* "translatey" add space in top */
+    transition: 0.5s;
+    /* animation of card */
+}
+
+.container .cards:hover .content {
+    /* while hovering cards what happens */
+    transform: translateY(0);
+    /* while hovering cards come in 0 form 100% as mentioned above */
+}
+
+.container .cards .content .details {
+    /* details contains description of people property as child of content */
+    display: flex;
+    /* display content as parent property */
+    justify-content: center;
+    /* horizontally center */
+    align-items: center;
+    /* vertically center */
+    flex-direction: column;
+    /* element arrange in one by one i.e column  */
+    text-align: center;
+    /* horizontally center */
+}
+
+.container .cards .content .details h2 {
+    /* element in h2 property */
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.container .cards .content .details h2 .link{
+    text-decoration: none;
+}
+
+.container .cards .content .details h2 span {
+    /* elements in span property */
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #03a9f4;
+}
+
+.social_icons {
+    /* whole social icon property */
+    position: relative;
+    /* making whole social icon position as parent */
+    display: flex;
+    /* display social icon as parent property */
+    margin-top: 5px;
+    /* add space in social icon top 5px */
+}
+
+.social_icons li {
+    /* group of social icon property */
+    list-style: none;
+    /* dot points are hidden */
+    margin: 4px;
+    /* add space in each social icon */
+}
+
+.social_icons li a {
+    /* each social icon property  */
+    width: 45px;
+    /* horizontally width of each social icon */
+    height: 45px;
+    /* vertically height of each social icon */
+    display: flex;
+    /* display each social icon as parent property */
+    justify-content: center;
+    /* horizontally center */
+    align-items: center;
+    /* vertically center */
+    background: #294d69;
+    /* add background color */
+    border-radius: 50%;
+    /* makes edge curve 50% i.e circle */
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    /* removes underline  */
+    transition: .5s;
+    /* animation of each social icon */
+}
+
+.social_icons li a:hover {
+    /* while hovering each social icon  */
+    transform: rotate(360deg);
+    /* each social icon rotates 360deg and again returns back in initial position */
+    background: #03a9f4;
+}
