@@ -53,6 +53,14 @@ a:hover { color: hsl(207, 100%, 30%); }
     user-select: none;
 }
 
+.toggle-passwordd {
+    position: absolute;
+    top: 55%;
+    right: .5rem;
+    /* cursor: pointer; */
+    user-select: none;
+}
+
 .toggle-password > i { display: none; }
 
 .form-control > label { display: block; }
