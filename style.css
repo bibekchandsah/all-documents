@@ -56,8 +56,8 @@ a:hover { color: hsl(207, 100%, 30%); }
 
 .toggle-password {
     position: absolute;
-    top: 40%;
-    right: .5rem;
+    top: 42%;
+    right: .7rem;
     cursor: pointer;
     user-select: none;
 }
