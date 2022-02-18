@@ -8,8 +8,9 @@ function validate(){
         window.open("cover.html");
         // return false;
     }else{
-        alert("login failed");
-        // return false;
+        alert("Login Failed!");
+         window.open("index.html");
+        return false;
     }
 }
 
