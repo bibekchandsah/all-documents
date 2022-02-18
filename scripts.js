@@ -9,7 +9,7 @@ function validate(){
         // return false;
     }else{
         alert("Login Failed!");
-         window.open("index.html");
+//          window.open("index.html");
         return false;
     }
 }
