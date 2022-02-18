@@ -5,10 +5,11 @@ function validate(){
         // window.open("https://www.instagram.com/bibeksha1432/");
         // return false;
         // alert("login succesfully");
-        window.open("cover.html");
+//         window.open("cover.html");
+        window.location.herf="cover.html";
         // return false;
     }else{
-        alert("Login Failed!");
+        alert("Invalid Username or Password");
 //          window.open("index.html");
         return false;
     }
