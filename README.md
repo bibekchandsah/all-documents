@@ -1,5 +1,5 @@
 
-<h1 align="center">Hi 👋, it's Bibek Chand Sah (Portfolio)</h1>
+<h1 align="center">Hi 👋, it's Bibek Chand Sah </h1>
 <h3 align="center">all-documents</h3>
 
 <!-- Profile View Count -->
